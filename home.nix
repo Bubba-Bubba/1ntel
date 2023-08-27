@@ -76,7 +76,6 @@ programs.bash = {
 shellAliases = {
       n = "sudo nvim";
       nv = "nvim";
-      nx = "cd /etc/nixos";
       cf = "cd /etc/nixos && sudo hx configuration.nix";
       fl = "cd /etc/nixos && sudo hx flake.nix";
       hm = "cd /etc/nixos && sudo hx home.nix";
