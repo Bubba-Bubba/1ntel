@@ -9,34 +9,58 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+nixvim = {
+    url = "github:nix-community/nixvim";
+  #  # If you are not running an unstable channel of nixpkgs, select the corresponding branch of nixvim.
+    # url = "github:nix-community/nixvim/nixos-23.05";
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
+
+nix-index-database = {
+      url = "github:Mic92/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  
+
 helix.url = "github:helix-editor/helix/23.05"; 
   };
 
-outputs = { self, nixpkgs, home-manager, ... }@inputs : {
+outputs = { self, nixpkgs, home-manager, nixvim, nix-index-database, ... }@inputs : 
+let
+    system = "x86_64-linux";
+    homeManagerModules = [ 
+    nixvim.homeManagerModules.nixvim
+    nix-index-database.hmModules.nix-index
+     ];
+  in
+{
     nixosConfigurations = {
       My_Nix = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-                  specialArgs = inputs;
+             inherit system;                  
+            specialArgs = inputs;
 
          modules = [
           ./configuration.nix
-
-          # make home-manager as a module of nixos
-          # so that home-manager configuration will be deployed automatically when executing `nixos-rebuild switch`
-          home-manager.nixosModules.home-manager
+                    # make home-manager as a module of nixos
+          # so that home-manager configuration will be deployed 
+          #automatically when executing `nixos-rebuild switch`
+            home-manager.nixosModules.home-manager
+                #  home-manager.nixosModules.home-manager
           {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-
-            home-manager.users.marcus = import ./home.nix;
-
-            # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            users.marcus.imports = [
+              ./home.nix  
+                    ]
+                   ++ homeManagerModules;
+          };
           }
-        ];
 
+        ];
+       };
+        
       };
     };
-  };
+
 }
-
-
