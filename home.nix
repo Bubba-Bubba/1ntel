@@ -74,11 +74,9 @@ programs.bash = {
 
 
 shellAliases = {
-      #post= "cd ~/Websites/Sites/nixs.info/content/english/posts";
-      #webs = "cd ~/Websites/Sites/nixs.info && npm run dev";
       n = "sudo nvim";
       nv = "nvim";
-      #webd = "cd ~/Websites/Sites/nixs.info";
+      nx = "cd /etc/nixos";
       cf = "cd /etc/nixos && sudo hx configuration.nix";
       fl = "cd /etc/nixos && sudo hx flake.nix";
       hm = "cd /etc/nixos && sudo hx home.nix";
