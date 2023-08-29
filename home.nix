@@ -74,6 +74,7 @@ programs.bash = {
 
 
 shellAliases = {
+      tc ="sensors";
       n = "sudo nvim";
       nv = "nvim";
       cf = "cd /etc/nixos && sudo hx configuration.nix";
