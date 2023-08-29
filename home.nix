@@ -76,9 +76,9 @@ programs.bash = {
 shellAliases = {
       n = "sudo nvim";
       nv = "nvim";
-      cf = "cd /etc/nixos && sudo hx configuration.nix";
-      fl = "cd /etc/nixos && sudo hx flake.nix";
-      hm = "cd /etc/nixos && sudo hx home.nix";
+      cf = "cd /etc/nixos && sudo nvim configuration.nix";
+      fl = "cd /etc/nixos && sudo nvim flake.nix";
+      hm = "cd /etc/nixos && sudo nvim home.nix";
       rb = "sudo nixos-rebuild --flake .#My_Nix switch";
       c = "clear";
       g0 = "sudo git init";
@@ -93,7 +93,7 @@ shellAliases = {
       nx = "cd /etc/nixos";
       man = "man home-configuration.nix";
       maj = "sudo nix flake update && rb";
-
+      system = "nix -vv --version";
             
       };
 
