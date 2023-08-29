@@ -121,7 +121,7 @@ nix.settings.trusted-users = [ "marcus" ];
 	git  
 	brave
 	 helix.packages."${pkgs.system}".helix
-  lm-sensors
+  lm_sensors
 ];
 
 environment.variables.EDITOR = "vim";
