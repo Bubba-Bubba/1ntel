@@ -32,6 +32,8 @@ colorschemes.kanagawa.enable = true;
 
 
   home.packages = with pkgs; [
+  python39
+  python311Packages.pip
   tree
   nnn
   exa
