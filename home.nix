@@ -6,7 +6,7 @@
 
 programs.nixvim = {
     enable = true;
-colorschemes.everblush.enable = true;
+colorschemes.kanagawa.enable = true;
     plugins.lightline.enable = true;
     # Configure neovim options...
     options = {
