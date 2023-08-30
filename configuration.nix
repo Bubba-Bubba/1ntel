@@ -55,7 +55,6 @@ nix.settings.trusted-users = [ "marcus" ];
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-virtualisation.virtualbox.host.enable = true;
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
@@ -111,8 +110,6 @@ virtualisation.virtualbox.host.enable = true;
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
 
-   users.extraGroups.vboxusers.members = [ "marcus" ];
-
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -126,6 +123,8 @@ virtualisation.virtualbox.host.enable = true;
 	brave
 	 helix.packages."${pkgs.system}".helix
   lm_sensors
+  linuxKernel.packages.linux_zen.vmware
+  vmware-workstation
 ];
 
 environment.variables.EDITOR = "vim";
