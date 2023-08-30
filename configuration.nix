@@ -102,6 +102,8 @@ nix.settings.trusted-users = [ "marcus" ];
     ];
   };
 
+services.flatpak.enable = true;
+
   # Enable automatic login for the user.
   services.xserver.displayManager.autoLogin.enable = true;
   services.xserver.displayManager.autoLogin.user = "marcus";
@@ -109,12 +111,9 @@ nix.settings.trusted-users = [ "marcus" ];
   # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
-
-virtualisation.libvirtd.enable = true;
-programs.dconf.enable = true;
-
+  
   # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
+    nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -125,7 +124,6 @@ programs.dconf.enable = true;
 	brave
 	 helix.packages."${pkgs.system}".helix
   lm_sensors
-  virt-manager
 ];
 
 environment.variables.EDITOR = "vim";
@@ -144,7 +142,7 @@ environment.variables.EDITOR = "vim";
   # services.openssh.enable = true;
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
+  # networking.firewall.allowedTCPPorts = [ 22 ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
