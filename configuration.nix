@@ -110,6 +110,8 @@ nix.settings.trusted-users = [ "marcus" ];
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
 
+virtualisation.libvirtd.enable = true;
+programs.dconf.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -123,8 +125,7 @@ nix.settings.trusted-users = [ "marcus" ];
 	brave
 	 helix.packages."${pkgs.system}".helix
   lm_sensors
-  linuxKernel.packages.linux_zen.vmware
-  vmware-workstation
+  virt-manager
 ];
 
 environment.variables.EDITOR = "vim";
