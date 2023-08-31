@@ -87,6 +87,9 @@ shellAliases = {
       g0 = "sudo git init";
       g1 = "sudo git add .";
       g3 = "sudo git push -u origin main";
+      ga = "git init";
+      gb = "git add .";
+      gc = "git push -u origin master";
       xx = "reboot";
       s = "sudo -s";
       pd = "cd ~/Programming/Python";      
@@ -97,9 +100,10 @@ shellAliases = {
       man = "man home-configuration.nix";
       maj = "sudo nix flake update && rb";
       system = "nix -vv --version";
-            
-      };
+      dor = "cd /home/marcus/Websites/DHC/data/en";
+      dors = "cd /home/marcus/Websites/DHC";
 
+      };
 };
 
   home.stateVersion = "23.05";
