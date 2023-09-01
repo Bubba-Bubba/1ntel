@@ -100,6 +100,7 @@ shellAliases = {
       altcheck = "sudo nixos-rebuild test --flake .#My_Nix";      
       check = "sudo nix flake check";
       nx = "cd /etc/nixos";
+      add = "cd /etc/nixos && sudo git init && sudo git add .";
       man = "man home-configuration.nix";
       maj = "sudo nix flake update && rb";
       system = "nix -vv --version";

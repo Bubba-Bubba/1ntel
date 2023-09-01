@@ -102,6 +102,11 @@ nix.settings.trusted-users = [ "marcus" ];
     ];
   };
 
+
+   virtualisation.virtualbox.host.enable = true;
+   users.extraGroups.vboxusers.members = [ "marcus" ];
+
+
 services.flatpak.enable = true;
 
   # Enable automatic login for the user.
