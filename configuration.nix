@@ -129,6 +129,7 @@ services.flatpak.enable = true;
 	brave
 	 helix.packages."${pkgs.system}".helix
   lm_sensors
+  linuxKernel.packages.linux_6_1.virtualbox
 ];
 
 environment.variables.EDITOR = "vim";
