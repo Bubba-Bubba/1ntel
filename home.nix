@@ -104,6 +104,8 @@ shellAliases = {
       dhc = "cd /home/marcus/Websites/DHC/data/en";
       dhd = "cd /home/marcus/Websites/DHC";
       dhs = "cd /home/marcus/Websites/DHC && hugo serve";
+      dhp = "dhd && ga & gb";
+      
       };
 };
 
