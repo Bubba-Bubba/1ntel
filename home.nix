@@ -72,6 +72,7 @@ programs.bash = {
 #      st = "status";
 #    };
 #  };
+#  git remote set-url origin https://USERNAME:TOKEN@github.com/USERNAME/REPOSITORY.git
 
 
 
@@ -94,15 +95,15 @@ shellAliases = {
       s = "sudo -s";
       pd = "cd ~/Programming/Python";      
       lq = "ls -ha";
-      test = "sudo nixos-rebuild test --flake .#My_Nix";      
+      altcheck = "sudo nixos-rebuild test --flake .#My_Nix";      
       check = "sudo nix flake check";
       nx = "cd /etc/nixos";
       man = "man home-configuration.nix";
       maj = "sudo nix flake update && rb";
       system = "nix -vv --version";
-      dor = "cd /home/marcus/Websites/DHC/data/en";
-      dors = "cd /home/marcus/Websites/DHC";
-
+      dhc = "cd /home/marcus/Websites/DHC/data/en";
+      dhd = "cd /home/marcus/Websites/DHC";
+      dhs = "cd /home/marcus/Websites/DHC && hugo serve";
       };
 };
 
