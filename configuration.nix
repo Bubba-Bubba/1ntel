@@ -135,10 +135,6 @@ services.flatpak.enable = true;
   lm_sensors
   linuxKernel.packages.linux_6_1.virtualbox
   waybar
-  (waybar.overrideAttrs (oldAttrs: {
-    mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
-  })
-)
 libnotify
 mako
 swww
