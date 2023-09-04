@@ -58,8 +58,6 @@ nix.settings.trusted-users = [ "marcus" ];
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
-xdg.portal.enable = true;
-xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
   # Configure keymap in X11
   services.xserver = {
@@ -108,6 +106,10 @@ xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
    virtualisation.virtualbox.host.enable = true;
    users.extraGroups.vboxusers.members = [ "marcus" ];
 
+programs.hyprland.enable = true;
+
+xdg.portal.enable = true;
+xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
 services.flatpak.enable = true;
 
