@@ -64,16 +64,42 @@ programs.bash = {
     '';
 
 # Git config using Home Manager modules
-#  programs.git = {
-#    enable = true;
-#    userName = "BriefNCounter";
-#    userEmail = "marcusdurston@yandex.com";
-#    aliases = {
-#      st = "status";
-#    };
-#  };
-#  git remote set-url origin https://USERNAME:TOKEN@github.com/USERNAME/REPOSITORY.git
+#  note: git remote set-url origin https://USERNAME:TOKEN@github.com/USERNAME/REPOSITORY.git
+  programs.git = {
+    enable = true;
+    userName = "BriefNCounter";
+    userEmail = "marcusdurston@yandex.com";
+    aliases = {
+      gst = "git status";
+    };
+  };
 
+# starship - an customizable prompt for any shell
+  programs.starship = {
+    enable = true;
+    # custom settings
+    settings = {
+      add_newline = false;
+      aws.disabled = true;
+      gcloud.disabled = true;
+      line_break.disabled = true;
+    };
+  };
+
+  # alacritty - a cross-platform, GPU-accelerated terminal emulator
+  programs.alacritty = {
+    enable = true;
+    # custom settings
+    settings = {
+      env.TERM = "xterm-256color";
+      font = {
+        size = 24;
+        draw_bold_text_with_bright_colors = true;
+      };
+      scrolling.multiplier = 5;
+      selection.save_to_clipboard = true;
+    };
+  };
 
 
 shellAliases = {
