@@ -26,7 +26,6 @@ nix.settings.trusted-users = [ "marcus" ];
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
@@ -58,6 +57,9 @@ nix.settings.trusted-users = [ "marcus" ];
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
+
+xdg.portal.enable = true;
+xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
   # Configure keymap in X11
   services.xserver = {
@@ -130,7 +132,19 @@ services.flatpak.enable = true;
 	 helix.packages."${pkgs.system}".helix
   lm_sensors
   linuxKernel.packages.linux_6_1.virtualbox
+  waybar
+  (waybar.overrideAttrs (oldAttrs: {
+    mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
+  })
+)
+libnotify
+mako
+swww
+rofi-wayland
+
+  
 ];
+
 
 environment.variables.EDITOR = "vim";
 
