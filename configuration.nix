@@ -151,7 +151,8 @@ services.flatpak.enable = true;
 	 helix.packages."${pkgs.system}".helix
   lm_sensors
   linuxKernel.packages.linux_6_1.virtualbox
-
+dpkg
+tldr
   
 ];
 

@@ -51,6 +51,8 @@ colorschemes.kanagawa.enable = true;
   hugo
   lsof
   which
+
+ 
   ];
 
 
