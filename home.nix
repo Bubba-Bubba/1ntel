@@ -1,4 +1,4 @@
-{config, pkgs, ... }:
+{config, pkgs, lib, ... }:
 
 {
   home.username = "marcus";
@@ -51,7 +51,6 @@ colorschemes.kanagawa.enable = true;
   hugo
   lsof
   which
-
  
   ];
 

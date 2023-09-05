@@ -9,8 +9,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-
-
 nixvim = {
     url = "github:nix-community/nixvim";
   #  # If you are not running an unstable channel of nixpkgs, select the corresponding branch of nixvim.
@@ -24,30 +22,27 @@ nix-index-database = {
     };
   
 
-nix-alien.url = "github:thiagokokada/nix-alien";
 helix.url = "github:helix-editor/helix/23.05"; 
   };
 
-outputs = { self, nixpkgs, home-manager, nixvim, nix-index-database, nix-alien, ... }@inputs : 
+outputs = { self, nixpkgs, home-manager, nixvim, nix-index-database, ... }@inputs : 
 let
     system = "x86_64-linux";
-    pkgs = import nixpkgs { inherit system; };
     homeManagerModules = [ 
     nixvim.homeManagerModules.nixvim
     nix-index-database.hmModules.nix-index
      ];
   in
 {
-      homeConfigurations.nix-alien-home = home-manager.lib.homeManagerConfiguration rec {
-          inherit pkgs;
-            extraSpecialArgs = { inherit self system; };
-      nixosConfigurations = {
-          My_Nix = nixpkgs.lib.nixosSystem {
+    nixosConfigurations = {
+      My_Nix = nixpkgs.lib.nixosSystem {
              inherit system;                  
-              specialArgs = inputs;
-          modules = [
+            specialArgs = inputs;
+ 
+         modules = [
           ./configuration.nix
-                          # make home-manager as a module of nixos
+         
+                            # make home-manager as a module of nixos
           # so that home-manager configuration will be deployed 
           #automatically when executing `nixos-rebuild switch`
             home-manager.nixosModules.home-manager
@@ -63,15 +58,10 @@ let
           };
           }
 
-               ({ self, system, ... }: {                                              
-                 home.packages = with self.inputs.nix-alien.packages.${system}; [     
-                   nix-alien                                                          
-                 ];                                                                   
-              })                                                                     
-             ];
+        ];
        };
         
       };
     };
-};
+
 }
