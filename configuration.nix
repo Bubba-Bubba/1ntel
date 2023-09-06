@@ -118,7 +118,6 @@ nix.settings.trusted-users = [ "marcus" ];
     description = "marcus";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      firefox
     #  thunderbird
     ];
   };
