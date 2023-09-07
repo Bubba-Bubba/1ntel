@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, helix, ... }:
+{ config, pkgs, lib, helix, ... }:
 
 {
   imports =
@@ -152,7 +152,26 @@ nix.settings.trusted-users = [ "marcus" ];
   linuxKernel.packages.linux_6_1.virtualbox
   yandex-browser
   librewolf 
-
+# Create an FHS environment using the command `fhs`, enabling the execution of non-NixOS packages in NixOS!
+    (let base = pkgs.appimageTools.defaultFhsEnvArgs; in
+      pkgs.buildFHSUserEnv (base // {
+      name = "fhs";
+      targetPkgs = pkgs: (
+        # pkgs.buildFHSUserEnv provides only a minimal FHS environment,
+        # lacking many basic packages needed by most software.
+        # Therefore, we need to add them manually.
+        #
+        # pkgs.appimageTools provides basic packages required by most software.
+          (base.targetPkgs pkgs ++ [
+          pkg-config
+          ncurses
+          # Feel free to add more packages here if needed.
+        ]
+     ));
+      profile = "export FHS=1";
+      runScript = "bash";
+      extraOutputsToInstall = ["dev"];
+    }))
 ];
 
 
