@@ -119,6 +119,7 @@ nix.settings.trusted-users = [ "marcus" ];
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
     #  thunderbird
+    librewolf
     ];
   };
 
