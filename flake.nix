@@ -21,7 +21,7 @@ nix-index-database = {
       inputs.nixpkgs.follows = "nixpkgs";
     };
   
-
+# nix-alien.url = "github:thiagokokada/nix-alien";
 helix.url = "github:helix-editor/helix/23.05"; 
   };
 
@@ -38,10 +38,18 @@ let
       My_Nix = nixpkgs.lib.nixosSystem {
              inherit system;                  
             specialArgs = inputs;
- 
-         modules = [
+# nixosConfigurations.nix-alien-desktop = nixpkgs.lib.nixosSystem rec {
+ #       system = "x86_64-linux"; # or aarch64-linux
+  #      specialArgs = { inherit self system; };
+        modules = [
+    #    ({ self, system, ... }: {
+   #         environment.systemPackages = with self.inputs.nix-alien.packages.${system}; [
+    #          nix-alien
+     #         ];
+            # Optional, needed for `nix-alien-ld`
+      #      programs.nix-ld.enable = true;
+       #   })
           ./configuration.nix
-         
                             # make home-manager as a module of nixos
           # so that home-manager configuration will be deployed 
           #automatically when executing `nixos-rebuild switch`
