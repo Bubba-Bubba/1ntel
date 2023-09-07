@@ -51,10 +51,9 @@ nix.settings.trusted-users = [ "marcus" ];
   # Enable networking
   networking.networkmanager.enable = true;
 
-  #networking.firewall.enable = true;
+  networking.firewall.enable = true;
 
-
-  # Set your time zone.
+    # Set your time zone.
   time.timeZone = "Europe/Paris";
 
   # Select internationalisation properties.
@@ -123,11 +122,11 @@ nix.settings.trusted-users = [ "marcus" ];
   };
 
 
-   virtualisation.virtualbox.host.enable = true;
-   users.extraGroups.vboxusers.members = [ "marcus" ];
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = [ "marcus" ];
 
 
-services.flatpak.enable = true;
+  services.flatpak.enable = true;
 
   # Enable automatic login for the user.
   services.xserver.displayManager.autoLogin.enable = true;
@@ -138,20 +137,22 @@ services.flatpak.enable = true;
   systemd.services."autovt@tty1".enable = false;
   
   # Allow unfree packages
-    nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    wget
+  
+  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+  wget
 	git  
 	brave
-	 helix.packages."${pkgs.system}".helix
+	helix.packages."${pkgs.system}".helix
   lm_sensors
   linuxKernel.packages.linux_6_1.virtualbox
-yandex-browser
- librewolf 
+  yandex-browser
+  librewolf 
+
 ];
 
 
