@@ -119,7 +119,6 @@ nix.settings.trusted-users = [ "marcus" ];
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
     #  thunderbird
-    librewolf
     ];
   };
 
@@ -152,7 +151,7 @@ services.flatpak.enable = true;
   lm_sensors
   linuxKernel.packages.linux_6_1.virtualbox
 yandex-browser
-  
+ librewolf 
 ];
 
 
