@@ -103,8 +103,6 @@ programs.bash = {
 
 shellAliases = {
       tc = "sensors";
-      ff = "cd /home/marcus/.cache/mozilla/firefox";
-      fz = "cd /home/marcus/.mozilla/firefox";
       n = "sudo nvim";
       nv = "nvim";
       cf = "cd /etc/nixos && sudo hx configuration.nix";

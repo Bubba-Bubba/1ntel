@@ -152,7 +152,6 @@ services.flatpak.enable = true;
   linuxKernel.packages.linux_6_1.virtualbox
 yandex-browser
  librewolf 
-firefox
 ];
 
 
