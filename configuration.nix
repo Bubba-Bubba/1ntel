@@ -51,7 +51,7 @@ nix.settings.trusted-users = [ "marcus" ];
   # Enable networking
   networking.networkmanager.enable = true;
 
-  networking.firewall.enable = true;
+  #networking.firewall.enable = true;
 
 
   # Set your time zone.
