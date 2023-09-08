@@ -63,8 +63,11 @@ programs.bash = {
     bashrcExtra = ''
       export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
       alias lk="ls -lat"
-      PS1="(\$0) $ "
-    '';
+      shell_name=$(basename "$0")
+      # Use the shortened shell name in the prompt
+      export PS1="($shell_name) \$ "
+    
+            '';
 
 # Git config using Home Manager modules
 #  note: git remote set-url origin https://USERNAME:TOKEN@github.com/USERNAME/REPOSITORY.git
