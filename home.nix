@@ -63,6 +63,7 @@ programs.bash = {
     bashrcExtra = ''
       export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
       alias lk="ls -lat"
+      PS1="(\$0) $ "
     '';
 
 # Git config using Home Manager modules
