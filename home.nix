@@ -109,6 +109,7 @@ shellAliases = {
       cf = "cd /etc/nixos && sudo hx configuration.nix";
       fl = "cd /etc/nixos && sudo hx flake.nix";
       hm = "cd /etc/nixos && sudo hx home.nix";
+      maj = "sudo nix flake update";
       rb = "sudo nixos-rebuild --flake .#My_Nix switch";
       c = "clear";
       gs = "git status"; 
