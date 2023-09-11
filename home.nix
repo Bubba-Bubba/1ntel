@@ -36,7 +36,7 @@ colorschemes.kanagawa.enable = true;
   python311Packages.pip
   tree
   nnn
-  exa
+  eza
   ripgrep
   neofetch
   fzf
