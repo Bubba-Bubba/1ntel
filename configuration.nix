@@ -152,6 +152,8 @@ nix.settings.trusted-users = [ "marcus" ];
   linuxKernel.packages.linux_6_1.virtualbox
   yandex-browser
   qemu
+  appimagekit
+  appimage-run
   librewolf 
 # Create an FHS environment using the command `fhs`, enabling the execution of non-NixOS packages in NixOS!
     (let base = pkgs.appimageTools.defaultFhsEnvArgs; in
