@@ -149,11 +149,9 @@ nix.settings.trusted-users = [ "marcus" ];
 	brave
 	helix.packages."${pkgs.system}".helix
   lm_sensors
-  linuxKernel.packages.linux_6_1.virtualbox
+#  linuxKernel.packages.linux_6_1.virtualbox
   yandex-browser
   qemu
-  appimagekit
-  appimage-run
   librewolf 
 # Create an FHS environment using the command `fhs`, enabling the execution of non-NixOS packages in NixOS!
     (let base = pkgs.appimageTools.defaultFhsEnvArgs; in
@@ -163,7 +161,6 @@ nix.settings.trusted-users = [ "marcus" ];
         # pkgs.buildFHSUserEnv provides only a minimal FHS environment,
         # lacking many basic packages needed by most software.
         # Therefore, we need to add them manually.
-        #
         # pkgs.appimageTools provides basic packages required by most software.
           (base.targetPkgs pkgs ++ [
           pkg-config
