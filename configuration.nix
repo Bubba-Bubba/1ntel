@@ -165,6 +165,7 @@ nix.settings.trusted-users = [ "marcus" ];
           (base.targetPkgs pkgs ++ [
           pkg-config
           ncurses
+          gtk3
           # Feel free to add more packages here if needed.
         ]
      ));
