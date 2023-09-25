@@ -124,6 +124,7 @@ shellAliases = {
       xx = "reboot";
       s = "sudo -s";
       pd = "cd ~/Programming/Python";      
+      pf = "nix flake init -t github:MordragT/nix-templates#python-poetry";
       lq = "ls -ha";
       altcheck = "sudo nixos-rebuild test --flake .#My_Nix";      
       check = "sudo nix flake check";
