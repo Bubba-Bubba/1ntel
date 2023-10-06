@@ -45,7 +45,6 @@ colorschemes.kanagawa.enable = true;
   nix-output-monitor
   glow
   lsof
-  mailspring
   nodejs_20
   go
   hugo
@@ -125,7 +124,7 @@ shellAliases = {
       s = "sudo -s";
       pd = "cd ~/Programming/Python";      
       pf = "nix flake init -t github:MordragT/nix-templates#python-poetry";
-      pp = "cd ~/Programming/Python/Poetry_Projects";
+      pp = "cd ~/Poetry_Python";
       dev ="nix develop";      
       lq = "ls -ha";
       altcheck = "sudo nixos-rebuild test --flake .#My_Nix";      
