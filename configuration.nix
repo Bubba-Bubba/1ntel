@@ -147,6 +147,7 @@ nix.settings.trusted-users = [ "marcus" ];
   vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   wget
 	git  
+  brave
 	helix.packages."${pkgs.system}".helix
   lm_sensors
 #  linuxKernel.packages.linux_6_1.virtualbox
