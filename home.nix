@@ -133,6 +133,7 @@ shellAliases = {
       nx = "cd /etc/nixos";
       add = "cd /etc/nixos && sudo git init && sudo git add .";
       man = "man home-configuration.nix";
+      gens = "nix profile history --profile /nix/var/nix/profiles/system";
       flup = "sudo nix flake update && rb";
       system = "nix -vv --version";
       spd = "cd /home/marcus/Screenplays/Fade_In/fade_in/usr/bin && fhs";
