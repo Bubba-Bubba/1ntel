@@ -24,7 +24,7 @@ nix.settings.trusted-users = [ "marcus" ];
     "/crypto_keyfile.bin" = null;
   };
 
- boot.loader.systemd-boot.configurationLimit = 10;
+ boot.loader.systemd-boot.configurationLimit = 5;
   # boot.loader.grub.configurationLimit = 10;
 
   # Perform garbage collection weekly to maintain low disk usage
