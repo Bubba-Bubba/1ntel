@@ -153,7 +153,6 @@ nix.settings.trusted-users = [ "marcus" ];
 	helix.packages."${pkgs.system}".helix
   lm_sensors
 #  linuxKernel.packages.linux_6_1.virtualbox
-  yandex-browser
   qemu
   librewolf 
 # Create an FHS environment using the command `fhs`, enabling the execution of non-NixOS packages in NixOS!
