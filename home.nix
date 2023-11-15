@@ -12,7 +12,8 @@ colorschemes.kanagawa.enable = true;
     options = {
       relativenumber = true;
       incsearch = true;
-    };
+      shiftwidth = 2;
+        };
 
     # ...mappings...
     maps.normal = {
