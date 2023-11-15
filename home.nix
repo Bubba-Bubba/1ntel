@@ -148,7 +148,7 @@ shellAliases = {
       trim8 = "sudo nix profile wipe-history --older-than 8d --profile /nix/var/nix/profiles/system";
       trim4 = "sudo nix profile wipe-history --older-than 4d --profile /nix/var/nix/profiles/system";
       dbug = "sudo nix store gc --debug";
-
+      p ="python";
       
       };
 };
