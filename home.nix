@@ -142,6 +142,7 @@ shellAliases = {
       dhd = "cd /home/marcus/Websites/DHC";
       dhs = "cd /home/marcus/Websites/DHC && hugo serve";
       dhp = "dhd && ga && gb";
+      v = "virtualenv";
       trim25 = "sudo nix profile wipe-history --older-than 25d --profile /nix/var/nix/profiles/system";
       trim12 = "sudo nix profile wipe-history --older-than 12d --profile /nix/var/nix/profiles/system";
       trim8 = "sudo nix profile wipe-history --older-than 8d --profile /nix/var/nix/profiles/system";
