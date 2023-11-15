@@ -12,7 +12,7 @@ colorschemes.kanagawa.enable = true;
     options = {
       relativenumber = true;
       incsearch = true;
-      shiftwidth = 4;
+      shiftwidth = 3;
         };
 
     # ...mappings...
