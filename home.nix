@@ -4,32 +4,32 @@
   home.username = "marcus";
   home.homeDirectory = "/home/marcus";
 
-programs.nixvim = {
-    enable = true;
-colorschemes.kanagawa.enable = true;
-    plugins.lightline.enable = true;
+#programs.nixvim = {
+#    enable = true;
+#    colorschemes.kanagawa.enable = true;
+#    plugins.lightline.enable = true;
     # Configure neovim options...
-    options = {
-      relativenumber = true;
-      incsearch = true;
-      shiftwidth = 3;
-        };
+#    options = {
+#      relativenumber = true;
+#      incsearch = true;
+#      shiftwidth = 3;
+#        };
 
     # ...mappings...
-    maps.normal = {
-      "<C-s>" = ":w<CR>";
-      "<esc>" = { action = ":noh<CR>"; silent = true; };
-    };
+#    maps.normal = {
+#      "<C-s>" = ":w<CR>";
+#      "<esc>" = { action = ":noh<CR>"; silent = true; };
+#    };
 
     # ... and plugins
-    plugins = {
-      telescope.enable = true;
-      harpoon = {  # Hi Prime :)
-        enable = true;
-        keymaps.addFile = "<leader>a";
-      };
-    };
-  };
+#    plugins = {
+#      telescope.enable = true;
+#      harpoon = {  # Hi Prime :)
+#        enable = true;
+#        keymaps.addFile = "<leader>a";
+#      };
+#    };
+#  };
 
 
   home.packages = with pkgs; [
@@ -105,7 +105,7 @@ shellAliases = {
       xx = "reset";
       xxxx = "shutdown";
       sn = "sudo nvim";
-      nv = "nvim";
+ #     nv = "nvim";
       cf = "cd /etc/nixos && sudo hx configuration.nix";
       fl = "cd /etc/nixos && sudo hx flake.nix";
       hm = "cd /etc/nixos && sudo hx home.nix";
