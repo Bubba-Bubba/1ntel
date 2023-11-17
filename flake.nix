@@ -9,6 +9,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+plugin-onedark.url = "github:navarasu/onedark.nvim";
+    plugin-onedark.flake = false;
+
 #nixvim = {
 #    url = "github:nix-community/nixvim";
   #  # If you are not running an unstable channel of nixpkgs, select the corresponding branch of nixvim.
