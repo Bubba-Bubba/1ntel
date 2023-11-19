@@ -47,7 +47,8 @@ nixpkgs = {
     extraPackages = with pkgs; [
       lua-language-server
       rnix-lsp
-
+      pylsp
+      
       xclip
       wl-clipboard
     ];
