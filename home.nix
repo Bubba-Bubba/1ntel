@@ -65,8 +65,8 @@ nixpkgs = {
       }
 
       {
-        plugin = gruvbox-nvim;
-        config = "colorscheme gruvbox";
+        plugin = kanagawa-nvim;
+        config = "colorscheme kanagawa";
       }
 
       neodev-nvim
