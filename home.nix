@@ -8,6 +8,20 @@ nixpkgs = {
     overlays = [
       (final: prev: {
         vimPlugins = prev.vimPlugins // {
+          kanagawa-nvim = prev.vimUtils.buildVimPlugin {
+            name = "kanagawa";
+            src = inputs.plugin-kanagawa;
+          };
+        };
+      })
+    ];
+  };
+
+'''
+nixpkgs = {
+    overlays = [
+      (final: prev: {
+        vimPlugins = prev.vimPlugins // {
           own-onedark-nvim = prev.vimUtils.buildVimPlugin {
             name = "onedark";
             src = inputs.plugin-onedark;
@@ -16,8 +30,9 @@ nixpkgs = {
       })
     ];
   };
-
-  programs.neovim = 
+''
+  
+    programs.neovim = 
   let
     toLua = str: "lua << EOF\n${str}\nEOF\n";
     toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
@@ -112,35 +127,6 @@ nixpkgs = {
     #   ${builtins.readFile ./nvim/plugin/other.lua}
     # '';
   };
-
-
-
-#programs.nixvim = {
-#    enable = true;
-#    colorschemes.kanagawa.enable = true;
-#    plugins.lightline.enable = true;
-    # Configure neovim options...
-#    options = {
-#      relativenumber = true;
-#      incsearch = true;
-#      shiftwidth = 3;
-#        };
-
-    # ...mappings...
-#    maps.normal = {
-#      "<C-s>" = ":w<CR>";
-#      "<esc>" = { action = ":noh<CR>"; silent = true; };
-#    };
-
-    # ... and plugins
-#    plugins = {
-#      telescope.enable = true;
-#      harpoon = {  # Hi Prime :)
-#        enable = true;
-#        keymaps.addFile = "<leader>a";
-#      };
-#    };
-#  };
 
 
   home.packages = with pkgs; [
