@@ -369,19 +369,19 @@
         "type": "github"
       }
     },
-    "plugin-onedark": {
+    "plugin-kanagawa": {
       "flake": false,
       "locked": {
-        "lastModified": 1697730516,
-        "narHash": "sha256-X7eMzQXtUEpU3uAfTgJrPIwYiGPDFnPc1Cg0iHEVRA0=",
-        "owner": "navarasu",
-        "repo": "onedark.nvim",
-        "rev": "b9acd92ded2ba155867ca5af9d618e933d96e3b0",
+        "lastModified": 1696244569,
+        "narHash": "sha256-pbLcomZHzC2JGKF4oII6AAm5q/dzQtNfFAZVNX74nB8=",
+        "owner": "rebelot",
+        "repo": "kanagawa.nvim",
+        "rev": "c19b9023842697ec92caf72cd3599f7dd7be4456",
         "type": "github"
       },
       "original": {
-        "owner": "navarasu",
-        "repo": "onedark.nvim",
+        "owner": "rebelot",
+        "repo": "kanagawa.nvim",
         "type": "github"
       }
     },
@@ -391,7 +391,7 @@
         "home-manager": "home-manager",
         "nix-index-database": "nix-index-database",
         "nixpkgs": "nixpkgs_2",
-        "plugin-onedark": "plugin-onedark"
+        "plugin-kanagawa": "plugin-kanagawa"
       }
     },
     "rust-overlay": {
