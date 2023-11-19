@@ -25,7 +25,6 @@ nix.settings.trusted-users = [ "marcus" ];
   };
 
  boot.loader.systemd-boot.configurationLimit = 5;
-  # boot.loader.grub.configurationLimit = 10;
 
   # Perform garbage collection weekly to maintain low disk usage
   nix.gc = {
@@ -40,7 +39,6 @@ nix.settings.trusted-users = [ "marcus" ];
   # Refer to the following link for more details:
   # https://nixos.org/manual/nix/stable/command-ref/conf-file.html#conf-auto-optimise-store
   nix.settings.auto-optimise-store = true;
-
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -144,7 +142,7 @@ nix.settings.trusted-users = [ "marcus" ];
   environment.systemPackages = with pkgs; [
   virt-manager
   nushellFull
-  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+  vim
   wget
   aha
   btop
@@ -152,7 +150,6 @@ nix.settings.trusted-users = [ "marcus" ];
   brave
 	helix.packages."${pkgs.system}".helix
   lm_sensors
-#  linuxKernel.packages.linux_6_1.virtualbox
   qemu
   librewolf 
 # Create an FHS environment using the command `fhs`, enabling the execution of non-NixOS packages in NixOS!

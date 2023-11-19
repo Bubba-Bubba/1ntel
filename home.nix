@@ -17,21 +17,6 @@ nixpkgs = {
     ];
   };
 
-# nixpkgs = {
-#    overlays = [
-#       (final: prev: {
-#        vimPlugins = prev.vimPlugins // {
-#           own-onedark-nvim = prev.vimUtils.buildVimPlugin {
-#            name = "onedark";
-#             src = inputs.plugin-onedark;
-#          };
-#         };
-#      })
-#     ];
-#  };
-
-    
-        
     programs.neovim = 
   let
     toLua = str: "lua << EOF\n${str}\nEOF\n";
@@ -47,7 +32,6 @@ nixpkgs = {
     extraPackages = with pkgs; [
       lua-language-server
       rnix-lsp
-        python311Packages.python-lsp-server      
       xclip
       wl-clipboard
     ];
