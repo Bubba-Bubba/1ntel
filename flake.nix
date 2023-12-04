@@ -9,6 +9,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    mynvim.url ="github:mrcjkb/kickstart-nix.nvim"; 
+    mynvim.flake = false;
+
+
+    
 plugin-kanagawa.url = "github:rebelot/kanagawa.nvim";
     plugin-kanagawa.flake = false;
 

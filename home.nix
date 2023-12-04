@@ -5,6 +5,7 @@
   home.homeDirectory = "/home/marcus";
 
 
+
   home.packages = with pkgs; [
   python39
   python311Packages.pip
@@ -26,6 +27,7 @@
   which
  
   ];
+
 
 
 programs.bash = {
