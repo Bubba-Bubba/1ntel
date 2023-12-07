@@ -143,7 +143,7 @@ nix.settings.trusted-users = [ "marcus" ];
   virt-manager
   nushellFull
   vim
-  make
+  gnumake
   npm
   cargo
   wget
@@ -154,6 +154,7 @@ nix.settings.trusted-users = [ "marcus" ];
 	helix.packages."${pkgs.system}".helix
   lm_sensors
   qemu
+  nodejs_21
   librewolf 
 # Create an FHS environment using the command `fhs`, enabling the execution of non-NixOS packages in NixOS!
     (let base = pkgs.appimageTools.defaultFhsEnvArgs; in

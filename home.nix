@@ -22,7 +22,6 @@
   nix-output-monitor
   glow
   lsof
-  nodejs_20
   go
   hugo
   lsof
