@@ -144,7 +144,6 @@ nix.settings.trusted-users = [ "marcus" ];
   nushellFull
   vim
   gnumake
-  npm
   cargo
   wget
   aha

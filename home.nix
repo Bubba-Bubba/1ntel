@@ -95,6 +95,7 @@ shellAliases = {
       gc = "git commit -m";
       g3 = "sudo git push -u origin main";
       ga = "git init";
+      lv = "lvim";
       gb = "git add .";
       gd = "git push -u origin master";
       xxx = "reboot";
