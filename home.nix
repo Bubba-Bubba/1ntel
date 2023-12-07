@@ -10,6 +10,7 @@
   python39
   python311Packages.pip
   tree
+  neovim
   lunarvim
   nnn
   eza
