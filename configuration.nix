@@ -143,6 +143,9 @@ nix.settings.trusted-users = [ "marcus" ];
   virt-manager
   nushellFull
   vim
+  make
+  npm
+  cargo
   wget
   aha
   btop
