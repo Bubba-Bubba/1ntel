@@ -216,22 +216,6 @@
         "type": "github"
       }
     },
-    "mynvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1701640664,
-        "narHash": "sha256-AtjOQw4j9TQVyrvCy0Be3J1/B3Dwj6qXr1EAjIfYfu4=",
-        "owner": "mrcjkb",
-        "repo": "kickstart-nix.nvim",
-        "rev": "e469344c3b23f7bdac3540bdc164d769f2a6419e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "mrcjkb",
-        "repo": "kickstart-nix.nvim",
-        "type": "github"
-      }
-    },
     "nci": {
       "inputs": {
         "dream2nix": "dream2nix",
@@ -405,7 +389,6 @@
       "inputs": {
         "helix": "helix",
         "home-manager": "home-manager",
-        "mynvim": "mynvim",
         "nix-index-database": "nix-index-database",
         "nixpkgs": "nixpkgs_2",
         "plugin-kanagawa": "plugin-kanagawa"
