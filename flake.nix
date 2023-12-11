@@ -21,7 +21,6 @@ nix-index-database = {
 helix.url = "github:helix-editor/helix/23.05"; 
   };
 
-# minus nixvim
 outputs = { self, nixpkgs, home-manager, nix-index-database, ... }@inputs : 
 let
     system = "x86_64-linux";
@@ -31,17 +30,16 @@ let
   in
 {
     nixosConfigurations = {
-      My_Nix = nixpkgs.lib.nixosSystem {
+      MyNix = nixpkgs.lib.nixosSystem {
              inherit system;                  
             specialArgs = inputs;
-
                 modules = [
-
+inputs.home-manager.nixosModules.default
                     ./configuration.nix
                             # make home-manager as a module of nixos
           # so that home-manager configuration will be deployed 
           #automatically when executing `nixos-rebuild switch`
-            home-manager.nixosModules.home-manager
+          home-manager.nixosModules.home-manager
                 #  home-manager.nixosModules.home-manager
           {
           home-manager = {

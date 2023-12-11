@@ -119,6 +119,7 @@ nix.settings.trusted-users = [ "marcus" ];
     ];
   };
 
+
   virtualisation.libvirtd.enable = true;
   programs.dconf.enable = true;
   virtualisation.virtualbox.host.enable = false;
