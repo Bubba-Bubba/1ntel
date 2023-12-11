@@ -2,12 +2,12 @@
   description = "FLAKE - Marcus's NixOS configuration";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    # home-manager, used for managing user configuration
-    home-manager = {
-      url = "github:nix-community/home-manager/master";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+        nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+
+        home-manager = {
+            url = "github:nix-community/home-manager/master";
+            inputs.nixpkgs.follows = "nixpkgs";
+          };
 
     
 plugin-kanagawa.url = "github:rebelot/kanagawa.nvim";
